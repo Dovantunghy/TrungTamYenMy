@@ -1,0 +1,217 @@
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\csc.exe
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\System.Collections.Immutable.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\System.Reflection.Metadata.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\vbc.exe
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe.config
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.dll.config
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.pdb
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Antlr3.Runtime.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.SqlServer.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Web.Infrastructure.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Newtonsoft.Json.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Owin.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Helpers.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Mvc.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Optimization.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Razor.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Razor.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\WebGrease.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Helpers.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Mvc.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Optimization.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Razor.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Razor.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Antlr3.Runtime.pdb
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Newtonsoft.Json.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.SqlServer.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\obj\Debug\TrungTamYenMy.csprojResolveAssemblyReference.cache
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\obj\Debug\TrungTamYenMy.dll
+E:\DoAn3\TrungTamYenMy\TrungTamYenMy\obj\Debug\TrungTamYenMy.pdb
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\csc.exe
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\vbc.exe
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.dll.config
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\TrungTamYenMy.pdb
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Antlr3.Runtime.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.SqlServer.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Newtonsoft.Json.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Owin.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Helpers.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Mvc.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Optimization.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Razor.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Razor.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\WebGrease.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Helpers.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Mvc.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Optimization.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.Razor.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\System.Web.WebPages.Razor.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Antlr3.Runtime.pdb
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Newtonsoft.Json.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\EntityFramework.SqlServer.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\obj\Debug\TrungTamYenMy.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\obj\Debug\TrungTamYenMy.pdb
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\PagedList.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\PagedList.Mvc.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\PagedList.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\PagedList.Mvc.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\obj\Debug\TrungTamYenMy.csprojResolveAssemblyReference.cache
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\obj\Debug\TrungTamYenMy.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\obj\Debug\TrungTamYenMy.pdb
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\csc.exe
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\vbc.exe
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\TrungTamYenMy.dll.config
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\TrungTamYenMy.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\TrungTamYenMy.pdb
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Antlr3.Runtime.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\EntityFramework.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\EntityFramework.SqlServer.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Newtonsoft.Json.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Owin.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\PagedList.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\PagedList.Mvc.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Helpers.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Mvc.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Optimization.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Razor.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.Razor.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\WebGrease.dll
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\PagedList.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\PagedList.Mvc.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Helpers.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Mvc.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Optimization.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.Razor.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.Deployment.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\System.Web.WebPages.Razor.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Antlr3.Runtime.pdb
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Newtonsoft.Json.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\EntityFramework.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\EntityFramework.SqlServer.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Core.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Facebook.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Cookies.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.OAuth.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Google.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.Twitter.xml
+F:\DoAn3\TrungTamYenMy - Copy\TrungTamYenMy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Facebook.dll
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\Facebook.xml
+F:\DoAn3\TrungTamYenMy\TrungTamYenMy\bin\FacebookAPI.dll

@@ -1,0 +1,378 @@
+﻿
+@*@{
+    if (Session["UserID"] == null)
+    {
+        Response.Redirect("~/Admin/NguoiDung/DangNhap");
+    }
+}*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:29:02 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Admin-Trung tâm đào tạo Yên Mỹ</title>
+    <link rel="shortcut icon" href="http://daytot.vn/themes/daytot/favicon.ico" />
+
+    <link href="~/Assets/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Assets/admin/css/londinium-theme.css" rel="stylesheet" type="text/css">
+    <link href="~/Assets/admin/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Assets/admin/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <script src="/Assets/admin/js/plugins/ckfinder/ckfinder.js"></script>
+    <script src="/Assets/admin/js/plugins/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="~/ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/charts/sparkline.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/select2.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/inputmask.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/autosize.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/inputlimit.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/listbox.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/multiselect.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/tags.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/switch.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/uploader/plupload.full.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/uploader/plupload.queue.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/forms/wysihtml5/toolbar.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/fancybox.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/jgrowl.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/datatables.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/colorpicker.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/plugins/interface/timepicker.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Assets/admin/js/application.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Trung tâm Yên Mỹ"></a>
+            <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
+                <span class="sr-only">Toggle navbar</span>
+                <i class="icon-grid3"></i>
+            </button>
+            <button type="button" class="navbar-toggle offcanvas">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="icon-paragraph-justify2"></i>
+            </button>
+        </div>
+        <ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+            <div>
+                @*<li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-people"></i>
+                            <span class="label label-default">2</span>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Activity</span>
+                                <a href="#" class="pull-right"><i class="icon-paragraph-justify"></i></a>
+                            </div>
+                            <ul class="activity">
+                                <li>
+                                    <i class="icon-cart-checkout text-success"></i>
+                                    <div>
+                                        <a href="#">Eugene</a> ordered 2 copies of <a href="#">OEM license</a>
+                                        <span>14 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-heart text-danger"></i>
+                                    <div>
+                                        Your <a href="#">latest post</a> was liked by <a href="#">Audrey Mall</a>
+                                        <span>35 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-checkmark3 text-success"></i>
+                                    <div>
+                                        Mail server was updated. See <a href="#">changelog</a>
+                                        <span>About 2 hours ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-paragraph-justify2 text-warning"></i>
+                                    <div>
+                                        There are <a href="#">6 new tasks</a> waiting for you. Don't forget!
+                                        <span>About 3 hours ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-paragraph-justify2"></i>
+                            <span class="label label-default">6</span>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Messages</span>
+                                <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                            </div>
+                            <ul class="popup-messages">
+                                <li class="unread">
+                                    <a href="#">
+                                        <img src="images/demo/users/face1.png" alt="" class="user-face">
+                                        <strong>Eugene Kopyov <i class="icon-attachment2"></i></strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/demo/users/face2.png" alt="" class="user-face">
+                                        <strong>Jason Goldsmith <i class="icon-attachment2"></i></strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/demo/users/face3.png" alt="" class="user-face">
+                                        <strong>Angel Novator</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/demo/users/face4.png" alt="" class="user-face">
+                                        <strong>Monica Bloomberg</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/demo/users/face5.png" alt="" class="user-face">
+                                        <strong>Patrick Winsleur</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">
+                            <i class="icon-grid"></i>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Tasks list</span>
+                                <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                            </div>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Category</th>
+                                        <th class="text-center">Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Frontpage fixes</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-success">87%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-danger item-before"></span> <a href="#">CSS compilation</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-danger">18%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-info item-before"></span> <a href="#">Responsive layout changes</a></td>
+                                        <td><span class="text-smaller text-semibold">Layout</span></td>
+                                        <td class="text-center"><span class="label label-info">52%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Add categories filter</a></td>
+                                        <td><span class="text-smaller text-semibold">Content</span></td>
+                                        <td class="text-center"><span class="label label-success">100%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Media grid padding issue</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-success">100%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>*@
+            </div>
+            <li class="user dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="@Session["Avatar"]" style="width: 36px; height: 40px; border-radius: 18px;" />
+                    <span>@Session["Name"]</span>
+                    <i class="caret"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><i class="icon-user"></i> Trang cá nhân</a></li>
+                    <li><a href="#"><i class="icon-bubble4"></i> Tin nhắn</a></li>
+                    <li><a href="#"><i class="icon-cog"></i> Cài đặt</a></li>
+                    <li><a href="@Url.Action("DangXuat","NguoiDung")"><i class="icon-exit"></i> Đăng xuất</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /navbar -->
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <!-- User dropdown -->
+                <div class="user-menu dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="@Session["Avatar"]" style="width: 40px; height: 40px; border-radius: 18px; margin-top: 5px;" alt="Ảnh đại diện">
+                        <div class="user-info">
+                            @Session["Name"]  <span>Web Developer</span>
+                        </div>
+                    </a>
+                    <div class="popup dropdown-menu dropdown-menu-right">
+                        <div class="thumbnail">
+                            <div class="thumb">
+                                <img src="@Session["Avatar"]" style="width: 180px; height: 170px; border-radius: 10px;" />
+                                <div class="thumb-options">
+                                    <span>
+                                        <a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a>
+                                        <a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="caption text-center">
+                                <h6>@Session["Name"] <small>Full tack developer</small></h6>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="icon-pencil3 text-muted"></i> Trang cá nhân </li>
+                            <li class="list-group-item"><i class="icon-people text-muted"></i> Chỉnh sửa</li>
+                            <li class="list-group-item"><a href="@Url.Action("DangXuat","NguoiDung")"><i class="icon-stats2 text-muted"></i> Đăng xuất </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /user dropdown -->
+                <!-- Main navigation -->
+                <ul class="navigation">
+                    <li class="active"><a href="/Admin/Home/Index"><span>Trang chủ</span> <i class="icon-screen2"></i></a></li>
+                    <li>
+                        <a href="#"><span>Tin tức</span> <i class="icon-paragraph-justify2"></i></a>
+                        <ul>
+                            <li><a href="/Admin/TinTuc/ThemMoi"><i class="fa fa-plus-square fa-fw"></i>Thêm mới</a></li>
+                            <li><a href="/Admin/TinTuc/DsTinTuc">Danh sách tin tức</a></li>
+                            <li><a href="#">Chuyên mục</a></li>
+                            <li><a href="#">Cài đặt</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Thời khóa biểu</span> <i class="icon-grid"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Quản lý học viên</span> <i class="icon-numbered-list"></i></a>
+                        <ul>
+                            <li><a href="/Admin/HocVien/ThemMoi">Thêm mới</a></li>
+                            <li><a href="/Admin/HocVien/DsHocVien">Danh sách học viên</a></li>
+                            <li><a href="#">Tư vấn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Quản lý giáo viên</span> <i class="icon-numbered-list"></i></a>
+                        <ul>
+                            <li><a href="/Admin/GiaoVien/ThemMoi">Thêm mới</a></li>
+                            <li><a href="/Admin/GiaoVien/DsGiaoVien">Danh sách giáo viên</a></li>
+                            <li><a href="#">Lịch dạy</a></li>
+                            <li><a href="#">Bảng chấm công</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span>Quản lý điểm danh</span> <i class="icon-bars"></i></a></li>
+                    <li>
+                        <a href="#"><span>Quản lý nhân viên</span> <i class="icon-user"></i></a>
+                        <ul>
+                            <li><a href="/Admin/NhanVien/ThemMoi">Thêm mới</a></li>
+                            <li><a href="/Admin/NhanVien/DsNhanVien">Danh sách nhân viên</a></li>
+                            <li><a href="#">Lịch làm việc</a></li>
+                            <li><a href="#">Bảng chấm công</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Quản lý lớp học</span> <i class="icon-bubble6"></i></a>
+                        <ul>
+                            <li><a href="/Admin/LopHoc/DsLopHoc">Danh sách lớp học</a></li>
+                            <li><a href="#">Xếp lớp</a></li>
+                            <li><a href="#">Chuyển lớp</a></li>
+                            <li><a href="#">Thời khóa biểu</a></li>
+                            <li><a href="#">Điểm danh</a></li>
+                            <li><a href="#">Tài liệu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Quản lý kết quả học tập</span> <i class="icon-table2"></i></a>
+                    </li>
+                    <li><a href="#"><span>Quản lý khóa học</span> <i class="icon-search3"></i></a></li>
+                    <li>
+                        <a href="#"><span>Hệ thống</span> <i class="icon-coin"></i></a>
+                        <ul>
+                            <li><a href="/Admin/NguoiDung/DsNguoiDung">Người dùng</a></li>
+                            <li><a href="#">Thiết lập chung</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Báo cáo doanh thu</span> <i class="icon-user-plus"></i></a>
+                        <ul>
+                            <li><a href="#">Doanh thu theo tháng</a></li>
+                            <li><a href="#">Khóa học</a></li>
+                            <li><a href="#">Giáo viên</a></li>
+                            <li><a href="#">Nhân viên</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span>Chỉnh giao diện</span> <i class="icon-copy"></i></a>
+                        <ul>
+                            <li><a href="sidebar_wide_left.html">Menu dọc trái</a></li>
+                            <li><a href="sidebar_wide_right.html">Menu dọc phải</a></li>
+                            <li><a href="sidebar_narrow_left.html">Menu trái thu nhỏ</a></li>
+                            <li><a href="sidebar_narrow_right.html">Menu phải thu nhỏ</a></li>
+                            <li><a href="sidebar_icons_left.html">Left aligned icons</a></li>
+                            <li><a href="layout_boxed.html">Boxed layout <span class="label label-danger">New</span></a></li>
+                            <li><a href="layout_fixed_navbar.html">Fixed navbar</a></li>
+                            <li><a href="horizontal_navigation.html">Horizontal navigation</a></li>
+                            <li><a href="horizontal_sidebar.html">Sidebar &amp; Horizontal navigation</a></li>
+                            <li><a href="navigation_disabled_items.html">Disabled navigation items</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /main navigation -->
+
+            </div>
+        </div>
+        <!-- /sidebar -->
+        <div class="page-content">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- /page container -->
+    @RenderSection("scripts", required: false)
+    @*<script src="~/Assets/admin/tinymce_4.7.1/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script>tinymce.init({ selector: 'textarea' });</script>*@
+        @*<script src="/Assets/admin/js/plugins/ckfinder/ckfinder.js"></script>
+        <script src="/Assets/admin/js/plugins/ckeditor/ckeditor.js"></script>*@
+    <script src="~/Assets/admin/js/admin-sb.js"></script>
+</body>
+<!-- Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:36:03 GMT -->
+</html>

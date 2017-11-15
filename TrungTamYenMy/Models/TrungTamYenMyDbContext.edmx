@@ -1,0 +1,1604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TrungTamYenMyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TieuDe" Type="ntext" />
+          <Property Name="MoTa" Type="ntext" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="500" />
+          <Property Name="NoiDung" Type="ntext" />
+          <Property Name="NguoiTao" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="FeedBack">
+          <Key>
+            <PropertyRef Name="MaFeedBack" />
+          </Key>
+          <Property Name="MaFeedBack" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="150" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="SoDT" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="500" />
+          <Property Name="TinNhan" Type="ntext" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="Footer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Content" Type="ntext" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="GiaoVien">
+          <Key>
+            <PropertyRef Name="MaGV" />
+          </Key>
+          <Property Name="MaGV" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenGV" Type="nvarchar" MaxLength="50" />
+          <Property Name="Anh" Type="nvarchar" MaxLength="500" />
+          <Property Name="ThongTin" Type="nvarchar(max)" />
+          <Property Name="MoTa" Type="ntext" />
+          <Property Name="GioiThieu" Type="ntext" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoNamCongTac" Type="int" />
+          <Property Name="NoiCongTac" Type="nvarchar" MaxLength="250" />
+          <Property Name="SoDT" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="Luong" Type="int" />
+          <Property Name="MaLop" Type="bigint" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="HocVien">
+          <Key>
+            <PropertyRef Name="MaHV" />
+          </Key>
+          <Property Name="MaHV" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenHV" Type="nvarchar" MaxLength="150" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="500" />
+          <Property Name="SoDT" Type="nvarchar" MaxLength="12" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="MaLop" Type="bigint" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="KeHoachDaoTao">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenKH" Type="nvarchar" MaxLength="500" />
+          <Property Name="NoiDung" Type="text" />
+          <Property Name="MaNV" Type="bigint" />
+          <Property Name="UserID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="KetQuaHocTap">
+          <Key>
+            <PropertyRef Name="MaHV" />
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaHV" Type="bigint" Nullable="false" />
+          <Property Name="MaLop" Type="bigint" Nullable="false" />
+          <Property Name="DIemTB" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DanhGia" Type="nvarchar" MaxLength="500" />
+          <Property Name="KhenThuong" Type="nchar" MaxLength="10" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="KhoiHoc">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+          </Key>
+          <Property Name="MaKhoa" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenKhoa" Type="nvarchar" MaxLength="200" />
+          <Property Name="SoHV" Type="int" />
+          <Property Name="ThuThu" Type="int" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="LienHe">
+          <Key>
+            <PropertyRef Name="MaLienHe" />
+          </Key>
+          <Property Name="MaLienHe" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SoDT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="LoaiLopHoc">
+          <Key>
+            <PropertyRef Name="MaLoaiLop" />
+          </Key>
+          <Property Name="MaLoaiLop" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenLoaiLop" Type="nvarchar" MaxLength="250" />
+          <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="ParentID" Type="bigint" />
+          <Property Name="ThuTuHienThi" Type="int" />
+          <Property Name="CeoTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="TaoBoi" Type="nvarchar" MaxLength="250" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="LoaiTinTuc">
+          <Key>
+            <PropertyRef Name="MaLoaiTin" />
+          </Key>
+          <Property Name="MaLoaiTin" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenLoaiTin" Type="nvarchar" MaxLength="200" />
+          <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="ParentID" Type="bigint" />
+          <Property Name="ThuTuHienThi" Type="int" />
+          <Property Name="CeoTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="TaoBoi" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="LopHoc">
+          <Key>
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaLop" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lop" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenLop" Type="nvarchar" MaxLength="50" />
+          <Property Name="MetatTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="MoTa" Type="ntext" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="500" />
+          <Property Name="TenGiaoVienDay" Type="nvarchar" MaxLength="150" />
+          <Property Name="Thu" Type="nvarchar" MaxLength="50" />
+          <Property Name="KhungGioHoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoHV" Type="int" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="NgayBatDau" Type="datetime" />
+          <Property Name="NgayKetThuc" Type="datetime" />
+          <Property Name="MaLoaiLop" Type="bigint" />
+          <Property Name="TopHot" Type="datetime" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="LopHoc_HocVien">
+          <Key>
+            <PropertyRef Name="MaLop" />
+            <PropertyRef Name="MaHV" />
+          </Key>
+          <Property Name="MaLop" Type="bigint" Nullable="false" />
+          <Property Name="MaHV" Type="bigint" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="50" />
+          <Property Name="Link" Type="nvarchar" MaxLength="250" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="Target" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="TypeID" Type="int" />
+        </EntityType>
+        <EntityType Name="MenuType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenNV" Type="nvarchar" MaxLength="150" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="500" />
+          <Property Name="SoDT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Luong" Type="nchar" MaxLength="10" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChucVu" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="NhomNguoiDung">
+          <Key>
+            <PropertyRef Name="MaNhomNguoiDung" />
+          </Key>
+          <Property Name="MaNhomNguoiDung" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenNhomNguoiDung" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NhomNguoiDung_Quyen">
+          <Key>
+            <PropertyRef Name="MaNhomNguoiDung" />
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaNhomNguoiDung" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MaQuyen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="PhieuDiemDanh">
+          <Key>
+            <PropertyRef Name="MaDiemDanh" />
+          </Key>
+          <Property Name="MaDiemDanh" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaLop" Type="bigint" />
+          <Property Name="NgayDiemDanh" Type="datetime" />
+          <Property Name="MaHV" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaQuyen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenQuyen" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Slide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="250" />
+          <Property Name="ThuTu" Type="int" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TaiLieu">
+          <Key>
+            <PropertyRef Name="MaTaiLieu" />
+          </Key>
+          <Property Name="MaTaiLieu" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenTaiLieu" Type="nvarchar" MaxLength="500" />
+          <Property Name="MoTa" Type="ntext" />
+          <Property Name="MaLop" Type="bigint" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="TinTuc">
+          <Key>
+            <PropertyRef Name="MaTinTuc" />
+          </Key>
+          <Property Name="MaTinTuc" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TieuDe" Type="ntext" />
+          <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Mota" Type="ntext" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="500" />
+          <Property Name="NoiDung" Type="ntext" />
+          <Property Name="NguoiViet" Type="nvarchar" MaxLength="150" />
+          <Property Name="NguoiDang" Type="nvarchar" MaxLength="150" />
+          <Property Name="NgayDang" Type="datetime" />
+          <Property Name="MaLoaiTin" Type="bigint" />
+          <Property Name="TopHot" Type="datetime" />
+          <Property Name="SoLuotXem" Type="int" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaNhomNguoiDung" Type="varchar" MaxLength="20" />
+          <Property Name="Avatar" Type="nvarchar" MaxLength="500" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Authorities" Type="bit" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <Association Name="FK_GiaoVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="GiaoVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HocVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="HocVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KeHoachDaoTao_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="KeHoachDaoTao" Type="Self.KeHoachDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="KeHoachDaoTao">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KeHoachDaoTao_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="KeHoachDaoTao" Type="Self.KeHoachDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="KeHoachDaoTao">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaHocTap_HocVien">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="1" />
+          <End Role="KetQuaHocTap" Type="Self.KetQuaHocTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="KetQuaHocTap">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaHocTap_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="1" />
+          <End Role="KetQuaHocTap" Type="Self.KetQuaHocTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="KetQuaHocTap">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_HocVien_HocVien">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="1" />
+          <End Role="LopHoc_HocVien" Type="Self.LopHoc_HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="LopHoc_HocVien">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_HocVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="1" />
+          <End Role="LopHoc_HocVien" Type="Self.LopHoc_HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="LopHoc_HocVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_LoaiLopHoc">
+          <End Role="LoaiLopHoc" Type="Self.LoaiLopHoc" Multiplicity="0..1" />
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiLopHoc">
+              <PropertyRef Name="MaLoaiLop" />
+            </Principal>
+            <Dependent Role="LopHoc">
+              <PropertyRef Name="MaLoaiLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhomNguoiDung_Quyen_NhomNguoiDung">
+          <End Role="NhomNguoiDung" Type="Self.NhomNguoiDung" Multiplicity="1" />
+          <End Role="NhomNguoiDung_Quyen" Type="Self.NhomNguoiDung_Quyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhomNguoiDung">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Principal>
+            <Dependent Role="NhomNguoiDung_Quyen">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhomNguoiDung_Quyen_Quyen">
+          <End Role="Quyen" Type="Self.Quyen" Multiplicity="1" />
+          <End Role="NhomNguoiDung_Quyen" Type="Self.NhomNguoiDung_Quyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen">
+              <PropertyRef Name="MaQuyen" />
+            </Principal>
+            <Dependent Role="NhomNguoiDung_Quyen">
+              <PropertyRef Name="MaQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuDiemDanh_HocVien1">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="0..1" />
+          <End Role="PhieuDiemDanh" Type="Self.PhieuDiemDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="PhieuDiemDanh">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuDiemDanh_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="PhieuDiemDanh" Type="Self.PhieuDiemDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="PhieuDiemDanh">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaiLieu_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="TaiLieu" Type="Self.TaiLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="TaiLieu">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinTuc_LoaiTinTuc">
+          <End Role="LoaiTinTuc" Type="Self.LoaiTinTuc" Multiplicity="0..1" />
+          <End Role="TinTuc" Type="Self.TinTuc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTinTuc">
+              <PropertyRef Name="MaLoaiTin" />
+            </Principal>
+            <Dependent Role="TinTuc">
+              <PropertyRef Name="MaLoaiTin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_NhomNguoiDung">
+          <End Role="NhomNguoiDung" Type="Self.NhomNguoiDung" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhomNguoiDung">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TrungTamYenMyModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FeedBack" EntityType="Self.FeedBack" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Footer" EntityType="Self.Footer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GiaoVien" EntityType="Self.GiaoVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HocVien" EntityType="Self.HocVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KeHoachDaoTao" EntityType="Self.KeHoachDaoTao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KetQuaHocTap" EntityType="Self.KetQuaHocTap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KhoiHoc" EntityType="Self.KhoiHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LienHe" EntityType="Self.LienHe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiLopHoc" EntityType="Self.LoaiLopHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiTinTuc" EntityType="Self.LoaiTinTuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LopHoc" EntityType="Self.LopHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LopHoc_HocVien" EntityType="Self.LopHoc_HocVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuType" EntityType="Self.MenuType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhomNguoiDung" EntityType="Self.NhomNguoiDung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhomNguoiDung_Quyen" EntityType="Self.NhomNguoiDung_Quyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhieuDiemDanh" EntityType="Self.PhieuDiemDanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Quyen" EntityType="Self.Quyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiLieu" EntityType="Self.TaiLieu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinTuc" EntityType="Self.TinTuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GiaoVien_LopHoc" Association="Self.FK_GiaoVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="GiaoVien" EntitySet="GiaoVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HocVien_LopHoc" Association="Self.FK_HocVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="HocVien" EntitySet="HocVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KeHoachDaoTao_NhanVien" Association="Self.FK_KeHoachDaoTao_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="KeHoachDaoTao" EntitySet="KeHoachDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KeHoachDaoTao_User" Association="Self.FK_KeHoachDaoTao_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="KeHoachDaoTao" EntitySet="KeHoachDaoTao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaHocTap_HocVien" Association="Self.FK_KetQuaHocTap_HocVien">
+            <End Role="HocVien" EntitySet="HocVien" />
+            <End Role="KetQuaHocTap" EntitySet="KetQuaHocTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaHocTap_LopHoc" Association="Self.FK_KetQuaHocTap_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="KetQuaHocTap" EntitySet="KetQuaHocTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_HocVien_HocVien" Association="Self.FK_LopHoc_HocVien_HocVien">
+            <End Role="HocVien" EntitySet="HocVien" />
+            <End Role="LopHoc_HocVien" EntitySet="LopHoc_HocVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_HocVien_LopHoc" Association="Self.FK_LopHoc_HocVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="LopHoc_HocVien" EntitySet="LopHoc_HocVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_LoaiLopHoc" Association="Self.FK_LopHoc_LoaiLopHoc">
+            <End Role="LoaiLopHoc" EntitySet="LoaiLopHoc" />
+            <End Role="LopHoc" EntitySet="LopHoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhomNguoiDung_Quyen_NhomNguoiDung" Association="Self.FK_NhomNguoiDung_Quyen_NhomNguoiDung">
+            <End Role="NhomNguoiDung" EntitySet="NhomNguoiDung" />
+            <End Role="NhomNguoiDung_Quyen" EntitySet="NhomNguoiDung_Quyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhomNguoiDung_Quyen_Quyen" Association="Self.FK_NhomNguoiDung_Quyen_Quyen">
+            <End Role="Quyen" EntitySet="Quyen" />
+            <End Role="NhomNguoiDung_Quyen" EntitySet="NhomNguoiDung_Quyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuDiemDanh_HocVien1" Association="Self.FK_PhieuDiemDanh_HocVien1">
+            <End Role="HocVien" EntitySet="HocVien" />
+            <End Role="PhieuDiemDanh" EntitySet="PhieuDiemDanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuDiemDanh_LopHoc" Association="Self.FK_PhieuDiemDanh_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="PhieuDiemDanh" EntitySet="PhieuDiemDanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaiLieu_LopHoc" Association="Self.FK_TaiLieu_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHoc" />
+            <End Role="TaiLieu" EntitySet="TaiLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinTuc_LoaiTinTuc" Association="Self.FK_TinTuc_LoaiTinTuc">
+            <End Role="LoaiTinTuc" EntitySet="LoaiTinTuc" />
+            <End Role="TinTuc" EntitySet="TinTuc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_NhomNguoiDung" Association="Self.FK_User_NhomNguoiDung">
+            <End Role="NhomNguoiDung" EntitySet="NhomNguoiDung" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TrungTamYenMyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TieuDe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HinhAnh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiTao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="FeedBack">
+          <Key>
+            <PropertyRef Name="MaFeedBack" />
+          </Key>
+          <Property Name="MaFeedBack" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HoTen" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TinNhan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Footer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="GiaoVien">
+          <Key>
+            <PropertyRef Name="MaGV" />
+          </Key>
+          <Property Name="MaGV" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenGV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GioiThieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoNamCongTac" Type="Int32" />
+          <Property Name="NoiCongTac" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Luong" Type="Int32" />
+          <Property Name="MaLop" Type="Int64" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_GiaoVien_LopHoc" FromRole="GiaoVien" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="HocVien">
+          <Key>
+            <PropertyRef Name="MaHV" />
+          </Key>
+          <Property Name="MaHV" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenHV" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="QueQuan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SoDT" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MaLop" Type="Int64" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_HocVien_LopHoc" FromRole="HocVien" ToRole="LopHoc" />
+          <NavigationProperty Name="KetQuaHocTaps" Relationship="Self.FK_KetQuaHocTap_HocVien" FromRole="HocVien" ToRole="KetQuaHocTap" />
+          <NavigationProperty Name="LopHoc_HocVien" Relationship="Self.FK_LopHoc_HocVien_HocVien" FromRole="HocVien" ToRole="LopHoc_HocVien" />
+          <NavigationProperty Name="PhieuDiemDanhs" Relationship="Self.FK_PhieuDiemDanh_HocVien1" FromRole="HocVien" ToRole="PhieuDiemDanh" />
+        </EntityType>
+        <EntityType Name="KeHoachDaoTao">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MaNV" Type="Int64" />
+          <Property Name="UserID" Type="Int64" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK_KeHoachDaoTao_NhanVien" FromRole="KeHoachDaoTao" ToRole="NhanVien" />
+          <NavigationProperty Name="User" Relationship="Self.FK_KeHoachDaoTao_User" FromRole="KeHoachDaoTao" ToRole="User" />
+        </EntityType>
+        <EntityType Name="KetQuaHocTap">
+          <Key>
+            <PropertyRef Name="MaHV" />
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaHV" Type="Int64" Nullable="false" />
+          <Property Name="MaLop" Type="Int64" Nullable="false" />
+          <Property Name="DIemTB" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DanhGia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KhenThuong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="HocVien" Relationship="Self.FK_KetQuaHocTap_HocVien" FromRole="KetQuaHocTap" ToRole="HocVien" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_KetQuaHocTap_LopHoc" FromRole="KetQuaHocTap" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="KhoiHoc">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+          </Key>
+          <Property Name="MaKhoa" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKhoa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoHV" Type="Int32" />
+          <Property Name="ThuThu" Type="Int32" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="LienHe">
+          <Key>
+            <PropertyRef Name="MaLienHe" />
+          </Key>
+          <Property Name="MaLienHe" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DiaChi" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="LoaiLopHoc">
+          <Key>
+            <PropertyRef Name="MaLoaiLop" />
+          </Key>
+          <Property Name="MaLoaiLop" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiLop" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MetaTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ParentID" Type="Int64" />
+          <Property Name="ThuTuHienThi" Type="Int32" />
+          <Property Name="CeoTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="TaoBoi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="LopHocs" Relationship="Self.FK_LopHoc_LoaiLopHoc" FromRole="LoaiLopHoc" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="LoaiTinTuc">
+          <Key>
+            <PropertyRef Name="MaLoaiTin" />
+          </Key>
+          <Property Name="MaLoaiTin" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiTin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MetaTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ParentID" Type="Int64" />
+          <Property Name="ThuTuHienThi" Type="Int32" />
+          <Property Name="CeoTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="TaoBoi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="TinTucs" Relationship="Self.FK_TinTuc_LoaiTinTuc" FromRole="LoaiTinTuc" ToRole="TinTuc" />
+        </EntityType>
+        <EntityType Name="LopHoc">
+          <Key>
+            <PropertyRef Name="MaLop" />
+          </Key>
+          <Property Name="MaLop" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenLop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MetatTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HinhAnh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TenGiaoVienDay" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KhungGioHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoHV" Type="Int32" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Precision="3" />
+          <Property Name="MaLoaiLop" Type="Int64" />
+          <Property Name="TopHot" Type="DateTime" Precision="3" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="GiaoViens" Relationship="Self.FK_GiaoVien_LopHoc" FromRole="LopHoc" ToRole="GiaoVien" />
+          <NavigationProperty Name="HocViens" Relationship="Self.FK_HocVien_LopHoc" FromRole="LopHoc" ToRole="HocVien" />
+          <NavigationProperty Name="KetQuaHocTaps" Relationship="Self.FK_KetQuaHocTap_LopHoc" FromRole="LopHoc" ToRole="KetQuaHocTap" />
+          <NavigationProperty Name="LoaiLopHoc" Relationship="Self.FK_LopHoc_LoaiLopHoc" FromRole="LopHoc" ToRole="LoaiLopHoc" />
+          <NavigationProperty Name="LopHoc_HocVien" Relationship="Self.FK_LopHoc_HocVien_LopHoc" FromRole="LopHoc" ToRole="LopHoc_HocVien" />
+          <NavigationProperty Name="PhieuDiemDanhs" Relationship="Self.FK_PhieuDiemDanh_LopHoc" FromRole="LopHoc" ToRole="PhieuDiemDanh" />
+          <NavigationProperty Name="TaiLieux" Relationship="Self.FK_TaiLieu_LopHoc" FromRole="LopHoc" ToRole="TaiLieu" />
+        </EntityType>
+        <EntityType Name="LopHoc_HocVien">
+          <Key>
+            <PropertyRef Name="MaLop" />
+            <PropertyRef Name="MaHV" />
+          </Key>
+          <Property Name="MaLop" Type="Int64" Nullable="false" />
+          <Property Name="MaHV" Type="Int64" Nullable="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="HocVien" Relationship="Self.FK_LopHoc_HocVien_HocVien" FromRole="LopHoc_HocVien" ToRole="HocVien" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_LopHoc_HocVien_LopHoc" FromRole="LopHoc_HocVien" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayOrder" Type="Int32" />
+          <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="TypeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MenuType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNV" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="QueQuan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Luong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="KeHoachDaoTaos" Relationship="Self.FK_KeHoachDaoTao_NhanVien" FromRole="NhanVien" ToRole="KeHoachDaoTao" />
+        </EntityType>
+        <EntityType Name="NhomNguoiDung">
+          <Key>
+            <PropertyRef Name="MaNhomNguoiDung" />
+          </Key>
+          <Property Name="MaNhomNguoiDung" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenNhomNguoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhomNguoiDung_Quyen" Relationship="Self.FK_NhomNguoiDung_Quyen_NhomNguoiDung" FromRole="NhomNguoiDung" ToRole="NhomNguoiDung_Quyen" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_NhomNguoiDung" FromRole="NhomNguoiDung" ToRole="User" />
+        </EntityType>
+        <EntityType Name="NhomNguoiDung_Quyen">
+          <Key>
+            <PropertyRef Name="MaNhomNguoiDung" />
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaNhomNguoiDung" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="NhomNguoiDung" Relationship="Self.FK_NhomNguoiDung_Quyen_NhomNguoiDung" FromRole="NhomNguoiDung_Quyen" ToRole="NhomNguoiDung" />
+          <NavigationProperty Name="Quyen" Relationship="Self.FK_NhomNguoiDung_Quyen_Quyen" FromRole="NhomNguoiDung_Quyen" ToRole="Quyen" />
+        </EntityType>
+        <EntityType Name="PhieuDiemDanh">
+          <Key>
+            <PropertyRef Name="MaDiemDanh" />
+          </Key>
+          <Property Name="MaDiemDanh" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLop" Type="Int64" />
+          <Property Name="NgayDiemDanh" Type="DateTime" Precision="3" />
+          <Property Name="MaHV" Type="Int64" />
+          <NavigationProperty Name="HocVien" Relationship="Self.FK_PhieuDiemDanh_HocVien1" FromRole="PhieuDiemDanh" ToRole="HocVien" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_PhieuDiemDanh_LopHoc" FromRole="PhieuDiemDanh" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="Quyen">
+          <Key>
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhomNguoiDung_Quyen" Relationship="Self.FK_NhomNguoiDung_Quyen_Quyen" FromRole="Quyen" ToRole="NhomNguoiDung_Quyen" />
+        </EntityType>
+        <EntityType Name="Slide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HinhAnh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ThuTu" Type="Int32" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TaiLieu">
+          <Key>
+            <PropertyRef Name="MaTaiLieu" />
+          </Key>
+          <Property Name="MaTaiLieu" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTaiLieu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaLop" Type="Int64" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="LopHoc" Relationship="Self.FK_TaiLieu_LopHoc" FromRole="TaiLieu" ToRole="LopHoc" />
+        </EntityType>
+        <EntityType Name="TinTuc">
+          <Key>
+            <PropertyRef Name="MaTinTuc" />
+          </Key>
+          <Property Name="MaTinTuc" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TieuDe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MetaTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HinhAnh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiViet" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NguoiDang" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NgayDang" Type="DateTime" Precision="3" />
+          <Property Name="MaLoaiTin" Type="Int64" />
+          <Property Name="TopHot" Type="DateTime" Precision="3" />
+          <Property Name="SoLuotXem" Type="Int32" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <NavigationProperty Name="LoaiTinTuc" Relationship="Self.FK_TinTuc_LoaiTinTuc" FromRole="TinTuc" ToRole="LoaiTinTuc" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaNhomNguoiDung" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Authorities" Type="Boolean" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="KeHoachDaoTaos" Relationship="Self.FK_KeHoachDaoTao_User" FromRole="User" ToRole="KeHoachDaoTao" />
+          <NavigationProperty Name="NhomNguoiDung" Relationship="Self.FK_User_NhomNguoiDung" FromRole="User" ToRole="NhomNguoiDung" />
+        </EntityType>
+        <Association Name="FK_GiaoVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="GiaoVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HocVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="HocVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaHocTap_HocVien">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="1" />
+          <End Role="KetQuaHocTap" Type="Self.KetQuaHocTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="KetQuaHocTap">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_HocVien_HocVien">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="1" />
+          <End Role="LopHoc_HocVien" Type="Self.LopHoc_HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="LopHoc_HocVien">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuDiemDanh_HocVien1">
+          <End Role="HocVien" Type="Self.HocVien" Multiplicity="0..1" />
+          <End Role="PhieuDiemDanh" Type="Self.PhieuDiemDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocVien">
+              <PropertyRef Name="MaHV" />
+            </Principal>
+            <Dependent Role="PhieuDiemDanh">
+              <PropertyRef Name="MaHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KeHoachDaoTao_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="KeHoachDaoTao" Type="Self.KeHoachDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="KeHoachDaoTao">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KeHoachDaoTao_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="KeHoachDaoTao" Type="Self.KeHoachDaoTao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="KeHoachDaoTao">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KetQuaHocTap_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="1" />
+          <End Role="KetQuaHocTap" Type="Self.KetQuaHocTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="KetQuaHocTap">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_LoaiLopHoc">
+          <End Role="LoaiLopHoc" Type="Self.LoaiLopHoc" Multiplicity="0..1" />
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiLopHoc">
+              <PropertyRef Name="MaLoaiLop" />
+            </Principal>
+            <Dependent Role="LopHoc">
+              <PropertyRef Name="MaLoaiLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinTuc_LoaiTinTuc">
+          <End Role="LoaiTinTuc" Type="Self.LoaiTinTuc" Multiplicity="0..1" />
+          <End Role="TinTuc" Type="Self.TinTuc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTinTuc">
+              <PropertyRef Name="MaLoaiTin" />
+            </Principal>
+            <Dependent Role="TinTuc">
+              <PropertyRef Name="MaLoaiTin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LopHoc_HocVien_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="1" />
+          <End Role="LopHoc_HocVien" Type="Self.LopHoc_HocVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="LopHoc_HocVien">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PhieuDiemDanh_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="PhieuDiemDanh" Type="Self.PhieuDiemDanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="PhieuDiemDanh">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaiLieu_LopHoc">
+          <End Role="LopHoc" Type="Self.LopHoc" Multiplicity="0..1" />
+          <End Role="TaiLieu" Type="Self.TaiLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LopHoc">
+              <PropertyRef Name="MaLop" />
+            </Principal>
+            <Dependent Role="TaiLieu">
+              <PropertyRef Name="MaLop" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhomNguoiDung_Quyen_NhomNguoiDung">
+          <End Role="NhomNguoiDung" Type="Self.NhomNguoiDung" Multiplicity="1" />
+          <End Role="NhomNguoiDung_Quyen" Type="Self.NhomNguoiDung_Quyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhomNguoiDung">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Principal>
+            <Dependent Role="NhomNguoiDung_Quyen">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_NhomNguoiDung">
+          <End Role="NhomNguoiDung" Type="Self.NhomNguoiDung" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhomNguoiDung">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="MaNhomNguoiDung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NhomNguoiDung_Quyen_Quyen">
+          <End Role="Quyen" Type="Self.Quyen" Multiplicity="1" />
+          <End Role="NhomNguoiDung_Quyen" Type="Self.NhomNguoiDung_Quyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Quyen">
+              <PropertyRef Name="MaQuyen" />
+            </Principal>
+            <Dependent Role="NhomNguoiDung_Quyen">
+              <PropertyRef Name="MaQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TrungTamYenMyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abouts" EntityType="Self.About" />
+          <EntitySet Name="FeedBacks" EntityType="Self.FeedBack" />
+          <EntitySet Name="Footers" EntityType="Self.Footer" />
+          <EntitySet Name="GiaoViens" EntityType="Self.GiaoVien" />
+          <EntitySet Name="HocViens" EntityType="Self.HocVien" />
+          <EntitySet Name="KeHoachDaoTaos" EntityType="Self.KeHoachDaoTao" />
+          <EntitySet Name="KetQuaHocTaps" EntityType="Self.KetQuaHocTap" />
+          <EntitySet Name="KhoiHocs" EntityType="Self.KhoiHoc" />
+          <EntitySet Name="LienHes" EntityType="Self.LienHe" />
+          <EntitySet Name="LoaiLopHocs" EntityType="Self.LoaiLopHoc" />
+          <EntitySet Name="LoaiTinTucs" EntityType="Self.LoaiTinTuc" />
+          <EntitySet Name="LopHocs" EntityType="Self.LopHoc" />
+          <EntitySet Name="LopHoc_HocVien" EntityType="Self.LopHoc_HocVien" />
+          <EntitySet Name="Menus" EntityType="Self.Menu" />
+          <EntitySet Name="MenuTypes" EntityType="Self.MenuType" />
+          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+          <EntitySet Name="NhomNguoiDungs" EntityType="Self.NhomNguoiDung" />
+          <EntitySet Name="NhomNguoiDung_Quyen" EntityType="Self.NhomNguoiDung_Quyen" />
+          <EntitySet Name="PhieuDiemDanhs" EntityType="Self.PhieuDiemDanh" />
+          <EntitySet Name="Quyens" EntityType="Self.Quyen" />
+          <EntitySet Name="Slides" EntityType="Self.Slide" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Tags" EntityType="Self.Tag" />
+          <EntitySet Name="TaiLieux" EntityType="Self.TaiLieu" />
+          <EntitySet Name="TinTucs" EntityType="Self.TinTuc" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_GiaoVien_LopHoc" Association="Self.FK_GiaoVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="GiaoVien" EntitySet="GiaoViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HocVien_LopHoc" Association="Self.FK_HocVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="HocVien" EntitySet="HocViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaHocTap_HocVien" Association="Self.FK_KetQuaHocTap_HocVien">
+            <End Role="HocVien" EntitySet="HocViens" />
+            <End Role="KetQuaHocTap" EntitySet="KetQuaHocTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_HocVien_HocVien" Association="Self.FK_LopHoc_HocVien_HocVien">
+            <End Role="HocVien" EntitySet="HocViens" />
+            <End Role="LopHoc_HocVien" EntitySet="LopHoc_HocVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuDiemDanh_HocVien1" Association="Self.FK_PhieuDiemDanh_HocVien1">
+            <End Role="HocVien" EntitySet="HocViens" />
+            <End Role="PhieuDiemDanh" EntitySet="PhieuDiemDanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KeHoachDaoTao_NhanVien" Association="Self.FK_KeHoachDaoTao_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="KeHoachDaoTao" EntitySet="KeHoachDaoTaos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KeHoachDaoTao_User" Association="Self.FK_KeHoachDaoTao_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="KeHoachDaoTao" EntitySet="KeHoachDaoTaos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KetQuaHocTap_LopHoc" Association="Self.FK_KetQuaHocTap_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="KetQuaHocTap" EntitySet="KetQuaHocTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_LoaiLopHoc" Association="Self.FK_LopHoc_LoaiLopHoc">
+            <End Role="LoaiLopHoc" EntitySet="LoaiLopHocs" />
+            <End Role="LopHoc" EntitySet="LopHocs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinTuc_LoaiTinTuc" Association="Self.FK_TinTuc_LoaiTinTuc">
+            <End Role="LoaiTinTuc" EntitySet="LoaiTinTucs" />
+            <End Role="TinTuc" EntitySet="TinTucs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LopHoc_HocVien_LopHoc" Association="Self.FK_LopHoc_HocVien_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="LopHoc_HocVien" EntitySet="LopHoc_HocVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PhieuDiemDanh_LopHoc" Association="Self.FK_PhieuDiemDanh_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="PhieuDiemDanh" EntitySet="PhieuDiemDanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaiLieu_LopHoc" Association="Self.FK_TaiLieu_LopHoc">
+            <End Role="LopHoc" EntitySet="LopHocs" />
+            <End Role="TaiLieu" EntitySet="TaiLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhomNguoiDung_Quyen_NhomNguoiDung" Association="Self.FK_NhomNguoiDung_Quyen_NhomNguoiDung">
+            <End Role="NhomNguoiDung" EntitySet="NhomNguoiDungs" />
+            <End Role="NhomNguoiDung_Quyen" EntitySet="NhomNguoiDung_Quyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_NhomNguoiDung" Association="Self.FK_User_NhomNguoiDung">
+            <End Role="NhomNguoiDung" EntitySet="NhomNguoiDungs" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NhomNguoiDung_Quyen_Quyen" Association="Self.FK_NhomNguoiDung_Quyen_Quyen">
+            <End Role="Quyen" EntitySet="Quyens" />
+            <End Role="NhomNguoiDung_Quyen" EntitySet="NhomNguoiDung_Quyen" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TrungTamYenMyModelStoreContainer" CdmEntityContainer="TrungTamYenMyEntities">
+          <EntitySetMapping Name="Abouts">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FeedBacks">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.FeedBack">
+              <MappingFragment StoreEntitySet="FeedBack">
+                <ScalarProperty Name="MaFeedBack" ColumnName="MaFeedBack" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="TinNhan" ColumnName="TinNhan" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Footers">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.Footer">
+              <MappingFragment StoreEntitySet="Footer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GiaoViens">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.GiaoVien">
+              <MappingFragment StoreEntitySet="GiaoVien">
+                <ScalarProperty Name="MaGV" ColumnName="MaGV" />
+                <ScalarProperty Name="TenGV" ColumnName="TenGV" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="GioiThieu" ColumnName="GioiThieu" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="SoNamCongTac" ColumnName="SoNamCongTac" />
+                <ScalarProperty Name="NoiCongTac" ColumnName="NoiCongTac" />
+                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HocViens">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.HocVien">
+              <MappingFragment StoreEntitySet="HocVien">
+                <ScalarProperty Name="MaHV" ColumnName="MaHV" />
+                <ScalarProperty Name="TenHV" ColumnName="TenHV" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KeHoachDaoTaos">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.KeHoachDaoTao">
+              <MappingFragment StoreEntitySet="KeHoachDaoTao">
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KetQuaHocTaps">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.KetQuaHocTap">
+              <MappingFragment StoreEntitySet="KetQuaHocTap">
+                <ScalarProperty Name="MaHV" ColumnName="MaHV" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="DIemTB" ColumnName="DIemTB" />
+                <ScalarProperty Name="DanhGia" ColumnName="DanhGia" />
+                <ScalarProperty Name="KhenThuong" ColumnName="KhenThuong" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhoiHocs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.KhoiHoc">
+              <MappingFragment StoreEntitySet="KhoiHoc">
+                <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+                <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+                <ScalarProperty Name="SoHV" ColumnName="SoHV" />
+                <ScalarProperty Name="ThuThu" ColumnName="ThuThu" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LienHes">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.LienHe">
+              <MappingFragment StoreEntitySet="LienHe">
+                <ScalarProperty Name="MaLienHe" ColumnName="MaLienHe" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiLopHocs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.LoaiLopHoc">
+              <MappingFragment StoreEntitySet="LoaiLopHoc">
+                <ScalarProperty Name="MaLoaiLop" ColumnName="MaLoaiLop" />
+                <ScalarProperty Name="TenLoaiLop" ColumnName="TenLoaiLop" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ThuTuHienThi" ColumnName="ThuTuHienThi" />
+                <ScalarProperty Name="CeoTitle" ColumnName="CeoTitle" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="TaoBoi" ColumnName="TaoBoi" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiTinTucs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.LoaiTinTuc">
+              <MappingFragment StoreEntitySet="LoaiTinTuc">
+                <ScalarProperty Name="MaLoaiTin" ColumnName="MaLoaiTin" />
+                <ScalarProperty Name="TenLoaiTin" ColumnName="TenLoaiTin" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="ThuTuHienThi" ColumnName="ThuTuHienThi" />
+                <ScalarProperty Name="CeoTitle" ColumnName="CeoTitle" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="TaoBoi" ColumnName="TaoBoi" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LopHocs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.LopHoc">
+              <MappingFragment StoreEntitySet="LopHoc">
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="Lop" ColumnName="Lop" />
+                <ScalarProperty Name="TenLop" ColumnName="TenLop" />
+                <ScalarProperty Name="MetatTitle" ColumnName="MetatTitle" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="TenGiaoVienDay" ColumnName="TenGiaoVienDay" />
+                <ScalarProperty Name="Thu" ColumnName="Thu" />
+                <ScalarProperty Name="KhungGioHoc" ColumnName="KhungGioHoc" />
+                <ScalarProperty Name="SoHV" ColumnName="SoHV" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="MaLoaiLop" ColumnName="MaLoaiLop" />
+                <ScalarProperty Name="TopHot" ColumnName="TopHot" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LopHoc_HocVien">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.LopHoc_HocVien">
+              <MappingFragment StoreEntitySet="LopHoc_HocVien">
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="MaHV" ColumnName="MaHV" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuTypes">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.MenuType">
+              <MappingFragment StoreEntitySet="MenuType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhanViens">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.NhanVien">
+              <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+                <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhomNguoiDungs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.NhomNguoiDung">
+              <MappingFragment StoreEntitySet="NhomNguoiDung">
+                <ScalarProperty Name="MaNhomNguoiDung" ColumnName="MaNhomNguoiDung" />
+                <ScalarProperty Name="TenNhomNguoiDung" ColumnName="TenNhomNguoiDung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhomNguoiDung_Quyen">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.NhomNguoiDung_Quyen">
+              <MappingFragment StoreEntitySet="NhomNguoiDung_Quyen">
+                <ScalarProperty Name="MaNhomNguoiDung" ColumnName="MaNhomNguoiDung" />
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuDiemDanhs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.PhieuDiemDanh">
+              <MappingFragment StoreEntitySet="PhieuDiemDanh">
+                <ScalarProperty Name="MaDiemDanh" ColumnName="MaDiemDanh" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="NgayDiemDanh" ColumnName="NgayDiemDanh" />
+                <ScalarProperty Name="MaHV" ColumnName="MaHV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Quyens">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.Quyen">
+              <MappingFragment StoreEntitySet="Quyen">
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Slides">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.Slide">
+              <MappingFragment StoreEntitySet="Slide">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="ThuTu" ColumnName="ThuTu" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.Tag">
+              <MappingFragment StoreEntitySet="Tag">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiLieux">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.TaiLieu">
+              <MappingFragment StoreEntitySet="TaiLieu">
+                <ScalarProperty Name="MaTaiLieu" ColumnName="MaTaiLieu" />
+                <ScalarProperty Name="TenTaiLieu" ColumnName="TenTaiLieu" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinTucs">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.TinTuc">
+              <MappingFragment StoreEntitySet="TinTuc">
+                <ScalarProperty Name="MaTinTuc" ColumnName="MaTinTuc" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="NguoiViet" ColumnName="NguoiViet" />
+                <ScalarProperty Name="NguoiDang" ColumnName="NguoiDang" />
+                <ScalarProperty Name="NgayDang" ColumnName="NgayDang" />
+                <ScalarProperty Name="MaLoaiTin" ColumnName="MaLoaiTin" />
+                <ScalarProperty Name="TopHot" ColumnName="TopHot" />
+                <ScalarProperty Name="SoLuotXem" ColumnName="SoLuotXem" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TrungTamYenMyModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MaNhomNguoiDung" ColumnName="MaNhomNguoiDung" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Authorities" ColumnName="Authorities" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

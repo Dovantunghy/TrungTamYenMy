@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6903d6e320e74e5192914872f7bf2177" Name="Diagram1">
+        <EntityTypeShape EntityType="TrungTamYenMyModel.About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.FeedBack" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.Footer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.GiaoVien" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.HocVien" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.KeHoachDaoTao" Width="1.5" PointX="14.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.KetQuaHocTap" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.KhoiHoc" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.LienHe" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.LoaiLopHoc" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.LoaiTinTuc" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.LopHoc" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.LopHoc_HocVien" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.Menu" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.MenuType" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.NhanVien" Width="1.5" PointX="12" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.NhomNguoiDung" Width="1.5" PointX="9.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.NhomNguoiDung_Quyen" Width="1.5" PointX="12" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.PhieuDiemDanh" Width="1.5" PointX="10.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.Quyen" Width="1.5" PointX="9.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.Slide" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.sysdiagram" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.Tag" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.TaiLieu" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.TinTuc" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrungTamYenMyModel.User" Width="1.5" PointX="12" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_GiaoVien_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_HocVien_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_KetQuaHocTap_HocVien" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_LopHoc_HocVien_HocVien" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_PhieuDiemDanh_HocVien1" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_KeHoachDaoTao_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_KeHoachDaoTao_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_KetQuaHocTap_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_LopHoc_LoaiLopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_TinTuc_LoaiTinTuc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_LopHoc_HocVien_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_PhieuDiemDanh_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_TaiLieu_LopHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_NhomNguoiDung_Quyen_NhomNguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_User_NhomNguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="TrungTamYenMyModel.FK_NhomNguoiDung_Quyen_Quyen" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

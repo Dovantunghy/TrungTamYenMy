@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "DsHocVien";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+@model List<TrungTamYenMy.Models.HocVien>
+
+
+@*Quản lý Học viên*@
+<body>
+    <div class="container" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h6 class="panel-title"><i class="icon-table"></i>Quản lý học viên</h6>
+                        <div style="float: right">
+                            <a href="/Admin/HocVien/ThemMoi" class="btn btn-success" id="btnAdd" style="width: 150px; background-color: #239232"><span class="glyphicon glyphicon-plus"></span> Thêm mới</a>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232"> <span class="glyphicon glyphicon-share"></span> Import</button>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232">Xuất file</button>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            $('#AlertBox').removeClass('hide');
+                            $('#AlertBox').delay(2000).slideUp(500);
+                        });
+
+                    </script>
+                    <div id="AlertBox">
+                        @Html.Raw(TempData["err"])
+                    </div>
+                    <div class="datatable">
+                        <table class="table">
+                            <thead>
+                                <tr style="background-color: #b6fafa">
+                                    <td><b>Tên học viên </b></td>
+                                    <td><b>Ngày sinh</b></td>
+                                    <td><b>Giới tính</b></td>
+                                    <td><b>Quê quán</b></td>
+                                    <td><b>Số điện thoại</b></td>
+                                    <td><b>Email</b></td>
+                                    <td><b>Mã lớp</b></td>
+                                    <td><b>Trạng thái</b></td>
+                                    <td>Sửa/Xóa</td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="vi">
+                                    <td>@item.TenHV</td>
+                                    <td>@item.NgaySinh</td>
+                                    <td>@item.GioiTinh</td>
+                                    <td>@item.QueQuan</td>
+                                    <td>@item.SoDT</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.LopHoc.TenLop</td>
+                                    <td>@item.TrangThai</td>
+                                    <td>
+                                        <a href="@Url.Action("ChinhSua","HocVien",new {@MaHV=item.MaHV})">Sửa</a>/<a href="@Url.Action("Xoa","HocVien",new {@MaHV=item.MaHV})">Xóa</a>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@*Kết thúc phần quản lý người dùng*@
+

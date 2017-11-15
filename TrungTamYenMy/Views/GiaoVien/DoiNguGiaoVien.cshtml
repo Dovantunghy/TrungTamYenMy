@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "DoiNguGiaoVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<TrungTamYenMy.Models.GiaoVien>
+
+<div class="container">
+    <div class="sellers_grid">
+        <ul class="promote">
+            <i class="promote_icon"> </i>
+            <li class="promote_head">
+                <br/>
+                <a href="/GiaoVien/DoiNguGiaoVien">
+                    <h3>Đội ngũ giáo viên</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="grid_2">
+        @foreach (var item in Model)
+            {
+            <div class="col-md-3 span_6">
+                <div class="box_inner">
+                    <a href="@Url.Action("ThongTinGiaoVien", new {@MaGV = @item.MaGV})" style="text-decoration: none;">
+                        <img src="@item.Anh" class="img-responsive" alt=""/>
+                        <div class="sale-box"> </div>
+                        <div class="desc">
+                            <h3>@item.ThongTin</h3>
+
+                            <h6>@item.MoTa</h6>
+
+                            <ul class="list2">
+                                <li class="list2_right"><span class="m_2"><a href="@Url.Action("ThongTinGiaoVien", new {@MaGV = @item.MaGV})" class="link1" style="background-color: #c4161c; border-radius: 5px">Chi tiết...</a></span></li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+                <br />
+            </div>
+        }
+
+        <div class="clearfix"> </div>
+    </div>
+</div>

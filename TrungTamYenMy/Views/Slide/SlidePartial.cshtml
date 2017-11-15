@@ -1,0 +1,17 @@
+﻿@using TrungTamYenMy.Models
+@model List<Slide>
+
+@*Phần Slide trang web*@
+<div class="index_slider">
+    <div class="container">
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider">
+                @foreach (var item in Model)
+                {
+                    <li><img src="@item.HinhAnh" class="img-responsive" alt="" style="height: 350px;"/></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+@*Kết thúc Slide*@

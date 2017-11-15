@@ -1,0 +1,106 @@
+﻿@model TrungTamYenMy.Models.TinTuc
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+
+<div>
+    <br/>
+    <h3>Bạn có muốn xóa tin tức này?</h3>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaTinTuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTinTuc)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.TieuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mota)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Mota)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnh)
+        </dd>
+        
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.NguoiViet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguoiViet)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.NguoiDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguoiDang)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDang)
+        </dd>
+       <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiTinTuc.TenLoaiTin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiTinTuc.TenLoaiTin)
+        </dd>
+        <br/>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+        <br/>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color col-lg-offset-1">
+            <input type="submit" value="Xóa" class="btn btn-success"/> |
+            @Html.ActionLink("Quay lại", "DsTinTuc")
+        </div>
+    }
+</div>

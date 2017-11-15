@@ -1,0 +1,126 @@
+﻿@model TrungTamYenMy.Models.LopHoc
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+
+<div>
+    <br/>
+    <h4>Bạn có muốn xóa lớp học này?</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLop)
+        </dd>
+        <br/>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetatTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetatTitle)
+        </dd>
+        <br/>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        <br/>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnh)
+        </dd>
+        <br/>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenGiaoVienDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenGiaoVienDay)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhungGioHoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhungGioHoc)
+        </dd>
+        <br />
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+        <br/>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBatDau)
+        </dd>
+        <br />
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKetThuc)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoHV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoHV)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color col-lg-offset-1">
+            <input type="submit" value="Xóa lớp học" class="btn btn-success"/> |
+            @Html.ActionLink("Quay lại", "DsLopHoc")
+        </div>
+    }
+</div>

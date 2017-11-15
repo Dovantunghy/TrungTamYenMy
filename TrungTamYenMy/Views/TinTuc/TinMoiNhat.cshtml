@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "TinMoiNhat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using TrungTamYenMy.Models
+
+@model List<TinTuc>
+
+<div class="container">
+    <br />
+
+    <div class="sellers_grid">
+        <ul class="sellers">
+            <i class="star"> </i>
+            <li class="sellers_desc"><a style="text-decoration: none" href="@Url.Action("TinMoiNhat","TinTuc")"><h2>Tin mới nhất</h2></a></li>
+            <div class="clearfix"> </div>
+
+        </ul>
+    </div>
+    <div class="grid_2">
+        @foreach (var item in Model)
+            {
+                if (@item.MaLoaiTin == 1)
+                {
+                <div class="col-md-3 span_6">
+                    <div class="box_inner">
+                        <a href="@Url.Action("XemTinTuc", new {@MaTinTuc = @item.MaTinTuc})" style="text-decoration: none;">
+                            <img src="@item.HinhAnh" class="img-responsive" alt="" />
+                            <div class="sale-box"> </div>
+                            <div class="desc">
+                                <h3>@item.TieuDe</h3>
+                                @if (item.Mota.Length > 80)
+                                {
+                                    <h6>@item.Mota.Substring(0, 80) ...</h6>
+                                }
+                                <ul class="list2">
+                                    <li class="list2_right"><span class="m_2"><a href="@Url.Action("XemTinTuc", new {@MaTinTuc = @item.MaTinTuc})" class="link1" style="background-color: #c4161c; border-radius: 5px">Đọc thêm</a></span></li>
+                                    <div class="clearfix"> </div>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            }
+        }
+        <style>
+            .pagination a {
+                color: black;
+                margin-bottom: -10%;
+                text-decoration: none;
+                transition: background-color .3s;
+                font-size: 13px;
+            }
+
+                .pagination a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+        </style>
+        <div style="float: right">
+            <!--Phân trang-->
+            @if (ViewBag.TotalPage >= 1)
+            {
+                var pageDisplay = (int)ViewBag.MaxPage;
+                int totalPage = (int)ViewBag.TotalPage;
+                int currentPage = ((int)ViewBag.Page);
+
+                // Create numeric links
+                var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+                var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+                var link = "/tin-tuc/";
+
+                <nav>
+                    <ul class="pagination">
+                        @if (currentPage > ViewBag.First)
+                {
+                            <li><a href="@link?page=@ViewBag.First" title="Trang đầu" class="first"><i class="fa fa-angle-double-left"></i>Trang đầu</a></li>
+                            <li>
+                                <a href="@link?page=@ViewBag.Prev" title="Trang trước" class="prev"><i class="fa fa-angle-left">&laquo;</i></a>
+                            </li>
+
+                        }
+                        @for (int i = startPageIndex; i <= endPageIndex; i++)
+                {
+                    if (currentPage == i)
+                    {
+
+                                <li> <a href="@link?page=@i" class="active" title="Trang @i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="@link?page=@i" title="Trang @i" class="pos">@i</a></li>
+                            }
+                        }
+                        @if (currentPage < totalPage)
+                {
+                            <li><a href="@link?page=@ViewBag.Next" class="next" title="Trang sau"><i class="fa fa-angle-right"></i>&raquo;</a></li>
+                            <li> <a href="@link?page=@ViewBag.Last" class="last" title="Trang cuối"><i class="fa fa-angle-double-right"></i>Cuối trang</a></li>
+                        }
+
+                    </ul>
+                </nav>
+            }
+            else
+            {
+                <span>Không có bản ghi nào</span>
+            }
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+
+

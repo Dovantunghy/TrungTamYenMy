@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+@model List<TrungTamYenMy.Models.User>
+
+@section scripts{
+    <script src="~/Assets/admin/js/controller/userController.js"></script>
+}
+
+@*Quản lý người dùng*@
+<body>
+<div class="container" style="padding-top: 20px;">
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-table"></i>Quản lý người dùng</h6>
+                    <div style="float: right">
+                        <a href="@Url.Action("ThemNguoiDung","NguoiDung")" class="btn btn-success" id="btnAdd" style="width: 150px; background-color: #239232"><span class="glyphicon glyphicon-plus"></span> Thêm mới</a>
+                        <button class="btn btn-success" style="width: 150px; background-color: #239232"> <span class="glyphicon glyphicon-share"></span> Import</button>
+                        <button class="btn btn-success" style="width: 150px; background-color: #239232">Xuất file</button>
+                    </div>
+                </div>
+                <script>
+                        $(function () {
+                            $('#AlertBox').removeClass('hide');
+                            $('#AlertBox').delay(2000).slideUp(500);
+                        });
+
+                </script>
+                <div id="AlertBox">
+                    @Html.Raw(TempData["err"])
+                </div>
+                <div class="datatable">
+                    <table class="table">
+                        <thead>
+                        <tr style="background-color: #b6fafa">
+                            <td><b>Mã người dùng</b></td>
+                            <td><b>Tên người dùng</b></td>
+                            <td><b>Địa chỉ</b></td>
+                            <td><b>Email</b></td>
+                            <td><b>Số điện thoại</b></td>
+                            <td><b>Quyền</b></td>
+                            <td><b>Tạo bởi</b></td>
+                            <td><b>Trạng thái</b></td>
+                            <td><b>Sửa/Xóa</b></td>
+                        </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="vi">
+                                <td>@item.UserID</td>
+                                <td>@item.Name</td>
+                                <td>@item.Address</td>
+                                <td>@item.Email</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Authorities</td>
+                                <td>@item.CreatedBy</td>
+                                <td><a href="#" class="btn-active" data-id="@item.UserID">@(item.Status?"Kích hoạt":"Khóa")</a></td>
+                                <td><a href="@Url.Action("ChinhSua","NguoiDung",new {@ID=item.UserID})">Sửa</a>/<a href="@Url.Action("Xoa","NguoiDung",new {@ID=item.UserID})">Xóa</a></td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+@*Kết thúc phần quản lý người dùng*@
+

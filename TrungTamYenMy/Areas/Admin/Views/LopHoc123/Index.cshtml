@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "DsLopHoc";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+
+@model List<TrungTamYenMy.Models.LopHoc>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+@*Quản lý người dùng*@
+<body>
+<div class="container" style="padding-top: 20px;">
+    <div class="row">
+        <div class="col-lg-11">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-table"></i>Quản lý lớp học</h6>
+                    <div style="float: right">
+                        <a class="btn btn-success" id="btnAdd" style="width: 150px; background-color: #239232" class="dropdown-toggle" data-toggle="modal" data-target="#add-category"><span class="glyphicon glyphicon-plus"></span> Thêm mới</a>
+                        <button class="btn btn-success" style="width: 150px; background-color: #239232"> <span class="glyphicon glyphicon-share"></span> Import</button>
+                        <button class="btn btn-success" style="width: 150px; background-color: #239232">Xuất file</button>
+                    </div>
+                </div>
+
+                <div class="datatable">
+                    <table class="table">
+                        <thead>
+                        <tr style="background-color: #b6fafa">
+                            <td><b>Tên lớp học</b></td>
+                            <td><b>Số học viên</b></td>
+                            <td><b>Trạng thái</b></td>
+                            <td><b>Sửa/Xóa</b></td>
+                        </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="vi">
+                                <td>@item.TenLop</td>
+                                <td>@item.SoHV</td>
+                                <td>@item.TrangThai</td>
+                                <td>
+                                    <a href="@Url.Action("ChinhSua", new {@MaLop = item.MaLop})">Sửa</a>/<a href="@Url.Action("Xoa", new {@MaLop = item.MaLop})">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="add-category">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Thêm lớp học</h4>
+            </div>
+            @using (Html.BeginForm("Add", "LopHoc123"))
+            {
+                <div class="box-body">
+
+                    <div class="form-group">
+                        <label for="txtTenLop">Tên lớp</label>
+                        <input type="text" class="form-control" id="txtTenLop" name="TenLop" placeholder="Tên lớp">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtSoHV">Số học viên</label>
+                        <input type="text" class="form-control" id="txtSoHV" name="SoHV" placeholder="Số học viên">
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TrangThai, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TrangThai, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TrangThai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            }
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+    <div class="modal" id="edit-category">
+        <div class="modal-dialog">
+            @using (Html.BeginForm("Edit", "Category", FormMethod.Post))
+            {
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title">Edit Category</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label>Id Category</label><br />
+                                <label id="lbl-id-category"></label>
+                                <input type="hidden" id="id-category" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control input-sm" id="name" name="Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Note">Note</label>
+                                <input type="text" class="form-control input-sm" id="note" name="Note">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Hủy bỏ</button>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                    </div>
+                </div>
+            }
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+@*Kết thúc phần quản lý lớp học*@
+
+

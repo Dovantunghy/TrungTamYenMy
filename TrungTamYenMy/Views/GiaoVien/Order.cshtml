@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model  List<TrungTamYenMy.Models.GiaoVien>
+
+<script type="text/javascript">
+    function selectFood(foodId) {
+        var selectedItem = $("#selected-item-" + foodId);
+        if (selectedItem.length > 0) {
+            var currentQty = parseInt($("#selected-item-qty-" + foodId).text());
+            currentQty = currentQty + 1;
+            $("#selected-item-qty-" + foodId).text(currentQty);
+            $("#txtHidenQty").val(currentQty);
+
+        } else {
+            var itemName = $("#food-name-" + foodId).text();
+            $("#selected-items").append("<div id='selected-item-" + foodId + "' food-id='" + foodId + "' class='row item' style='background-color:dodgerblue; height:50px; text-align:center; color:white;'>" +
+                                "<h3> <span class='foodId'>" + foodId + "</span> - " + itemName + " / SL: <span id='selected-item-qty-" + foodId + "'>1</span><span><button id='delete' onclick='del(" + foodId + ")' >Xóa!</button></span></div>"
+           );
+
+        }
+
+        var currentTotalMoney = parseFloat($("#total-money").text());
+        var priceItem = parseFloat($("#food-price-" + foodId).text());
+
+        var total = currentTotalMoney + priceItem;
+        $("#total-money").text(total);
+    }
+
+    function del(foodId) {
+        var currentTotalMoney = parseFloat($("#total-money").text());
+        var priceItem = parseFloat($("#food-price-" + foodId).text());
+        var currentQty = parseFloat($("#selected-item-qty-" + foodId).text());
+        var total = currentTotalMoney - (priceItem * currentQty);
+        $("#total-money").text(total);
+
+        $("#selected-item-" + foodId).remove();
+
+    }
+
+    function ThanhToan() {
+        arrayOrderLine = [];
+
+        $("#selected-items .item").each(function() {
+            var foodId = $(this).attr('food-id');
+            var qtyItem = parseInt($("#selected-item-qty-" + foodId).text());
+            var priceItem = parseFloat($("#food-price-" + foodId).text());
+            arrayOrderLine.push({
+                'idFood': foodId,
+                'Quantity': qtyItem,
+                'Price': priceItem
+            });
+        });
+
+        $.ajax({
+            method: "POST",
+            url: "/Screen/Payment",
+            data: { orderLine: arrayOrderLine }
+        })
+        .done(function( msg ) {
+            if(msg == 'OK') {
+                alert("Paid!");
+                location.reload();
+            } else {
+                alert( "Unpaid!" );
+            }
+        })
+        .fail(function() {
+            alert( "error" );
+        });
+    }
+
+</script>
+<div class="row" style="background-color:#f0eeee;">
+    <div class="col-md-8" style="max-height:1000px; margin:0 auto;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Please type something here to search">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var food in Model)
+            {
+                <div id="food-@food.MaGV" class="col-md-3" style="margin-top: 10px; text-align: center;" onclick="selectFood(@food.MaGV)">
+                    <img width="150" height="150" src="@food.Anh" />
+                    <p style="color: red; font-weight: bold"><span id="food-name-@food.MaGV">@food.TenGV</span></p>
+                    <p style="color: red; font-weight: bold">Giá: <span id="food-price-@food.MaGV">@food.Luong</span></p>
+
+                </div>
+            }
+        </div>
+    </div>
+    <div id="selected-items" class="col-md-4" style="min-height:500px; max-height:1000px;">
+        <div id="total" class="row" style="background-color: brown; height: 50px; text-align: center; color: white;">
+            <h3>
+                Tổng tiền: <span id="total-money">0</span> VNĐ
+            </h3>
+        </div>
+        <div class="row">
+            <input type="button" value="Thanh toán" onclick="ThanhToan()" class="btn btn-success form-control" style="height:40px;" />
+        </div>
+    </div>
+</div>
+
+

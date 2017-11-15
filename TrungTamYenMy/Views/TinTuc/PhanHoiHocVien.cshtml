@@ -1,0 +1,26 @@
+﻿
+@model List<TrungTamYenMy.Models.FeedBack>
+
+<ul class="spinner">
+    <i class="paperclip"> </i>
+    <li class="spinner_head">
+        <h3>Phản hồi từ học viên</h3>
+    </li>
+    <div class="clearfix"> </div>
+</ul>
+@foreach (var item in Model)
+{
+    <div class="a-top">
+        <div class="left-grid">
+            <img src="/Assets/client/images/t4.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="right-grid">
+            <h4><a href="#">@item.HoTen</a></h4>
+            <p>@item.TinNhan</p>
+        </div>
+        <div class="but">
+            <a class="arrow" href="#"> </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+}

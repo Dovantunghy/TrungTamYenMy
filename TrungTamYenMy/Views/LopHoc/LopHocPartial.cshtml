@@ -1,0 +1,48 @@
+﻿@model List<TrungTamYenMy.Models.LopHoc>
+
+<div class="megapanel">
+    <div class="row">
+            <div class="col1">
+                <div class="h_nav">
+                    <h4>Lớp 1-Lớp 5</h4>
+                    <ul>
+                        @foreach (var item in Model)
+                        {
+                            if(@item.MaLoaiLop<=5)
+                             {
+                                 <li><a href="/lop-hoc/@item.MetatTitle-@item.MaLop">@item.TenLop</a></li>
+                             }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col1">
+                <div class="h_nav">
+                    <h4>Lớp 6-Lớp 9</h4>
+                    <ul>
+                        @foreach (var item in Model)
+                        {
+                            if(@item.MaLoaiLop>5&&item.MaLoaiLop<=9)
+                             {
+                                 <li><a href="/lop-hoc/@item.MetatTitle-@item.MaLop" >@item.TenLop</a></li>
+                             }
+                        }
+                    </ul>
+                </div>
+            </div>
+        <div class="col2 col-md-6">
+            <div class="h_nav">
+                <h4>Lớp 10-Lớp 12</h4>
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        if (@item.MaLoaiLop >9)
+                        {
+                            <li><a href="/lop-hoc/@item.MetatTitle-@item.MaLop">@item.TenLop</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "DsTinTuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*Phần tiêu chí và tin tức*@
+<div class="content_top">
+    <div class="container">
+        <br/>
+        @*<div class="column_center">
+            <h1>Đào tạo chất lượng - uy tín là mục tiêu của chúng tôi</h1>
+            <h2>Trung tâm đào tạo Yên Mỹ luôn tự hào vì đạo tạo được những nhân tài, những mầm non tương lai của đất nước!</h2>
+        </div>*@
+        @Html.Action("TinTucMoiPartial", "TinTuc")
+        @Html.Action("TinTucNoiBatPartial", "TinTuc")
+        @Html.Action("TinTucThiCuPartial", "TinTuc")
+    </div>
+</div>
+@*Kết thúc phần tiêu chí và tin tức*@
+

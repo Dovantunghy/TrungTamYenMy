@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "DsTinTuc";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+@model List<TrungTamYenMy.Models.TinTuc>
+
+
+@*Quản lý Tin tức*@
+<body>
+    <div class="container" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h6 class="panel-title"><i class="icon-table"></i>Quản lý tin tức</h6>
+                        <div style="float: right">
+                            <a href="@Url.Action("ThemMoi")"class="btn btn-success" id="btnAdd" style="width: 150px; background-color: #239232"><span class="glyphicon glyphicon-plus"></span> Thêm mới</a>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232"> <span class="glyphicon glyphicon-share"></span> Import</button>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232">Xuất file</button>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            $('#AlertBox').removeClass('hide');
+                            $('#AlertBox').delay(2000).slideUp(500);
+                        });
+
+                    </script>
+                    <div id="AlertBox">
+                        @Html.Raw(TempData["err"])
+                    </div>
+                    <div class="datatable">
+                        <table class="table">
+                            <thead>
+                                <tr style="background-color: #b6fafa">
+                                    <td><b>Tiêu đề </b></td>
+                                    <td><b>Mô tả</b></td>
+                                    <td><b>Hỉnh ảnh bìa</b></td>
+                                    <td><b>Người viết</b></td>
+                                    <td><b>Người đăng</b></td>
+                                    <td><b>Ngày đăng</b></td>
+                                    <td><b>Loại tin</b></td>
+                                    <td><b>Trạng thái</b></td>
+                                    <td><b>Sửa/Xóa</b></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="vi">
+                                    <td>@item.TieuDe</td>
+                                    <td>@Html.Raw(item.Mota)</td>
+                                    <td><img src="@item.HinhAnh" style="width: 60px; height: 55px;" /></td>
+                                    <td>@item.NguoiViet</td>
+                                    <td>@item.NguoiDang</td>
+                                    <td>@item.NgayDang</td>
+                                    <td>@item.LoaiTinTuc.TenLoaiTin</td>
+                                    <td>@item.TrangThai</td>
+                                    <td>
+                                        <a href="@Url.Action("ChinhSua",new {@MaTinTuc=item.MaTinTuc})">Sửa</a>/<a href="@Url.Action("Xoa",new {@MaTinTuc=item.MaTinTuc})">Xóa</a>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@*Kết thúc phần quản lý người dùng*@
+
+

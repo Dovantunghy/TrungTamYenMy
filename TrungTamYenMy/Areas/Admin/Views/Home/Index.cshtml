@@ -1,0 +1,178 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+<br/>
+@*<marquee scrolldelay="10" scrollamount="10"><h3>Chào mừng bạn đến với trang quản trị Trung tâm đào tạo Yên Mỹ</h3></marquee>*@
+<link href="~/Assets/admin/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="~/Assets/admin/css/font-awesome-4.7.0/font-awesome-4.7.0/css/homeadmin.css" rel="stylesheet"/>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span style="margin-left: 10px; font-weight: 600;line-height: 30px">Biên Tập Nội Dung</span>
+    </div>
+    <div class="panel-body">
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("ThemMoi","HocVien")">
+                <img src="~/Assets/admin/imghome/ThemMoi.png" width="80" height="80" />
+            </a><br />
+            <a href="@Url.Action("ThemMoi","HocVien")">Thêm học viên mới</a>
+        </div>
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("DsHocVien","HocVien")">
+                <img src="~/Assets/admin/imghome/dssp.png" width="80" height="80" />
+            </a><br />
+            <a href="@Url.Action("DsHocVien","HocVien")">Danh sách hoc viên</a>
+        </div>
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("DsLopHoc","LopHoc")">
+                <img src="~/Assets/admin/imghome/danhmuc.png" width="80" height="80" />
+            </a><br />
+            <a href="@Url.Action("DsLopHoc","LopHoc")">Danh sách lớp học</a>
+        </div>
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("ThemMoi","LopHoc")">
+                <img src="~/Assets/admin/imghome/thembaiviet.png" width="80" height="80"/>
+            </a><br />
+            <a href="@Url.Action("ThemMoi","LopHoc")">Thêm lớp học mới</a>
+        </div>
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("DsTinTuc","TinTuc")">
+                <img src="~/Assets/admin/imghome/danhsach.png" width="80" height="80" />
+            </a><br />
+            <a href="@Url.Action("DsTinTuc","TinTuc")">Danh sách tin tức</a>
+        </div>
+        <div class="col-lg-2 text-center" style="margin-bottom: 10px">
+            <a href="@Url.Action("ThemMoi","TinTuc")">
+                <img src="~/Assets/admin/imghome/danhmuc.png" width="80" height="80" />
+            </a><br />
+            <a href="@Url.Action("ThemMoi","TinTuc")">Danh mục tin tin tức</a>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default" style="margin-top: -20px;">
+    <div class="panel-body">
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoHV</label></h3>
+                    <p>Học viên</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-users"></i>
+                </div>
+                <a href="@Url.Action("DsHocVien","HocVien")" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Giáo viên</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoTT</label></h3>
+                    <p>Tin tức</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-newspaper-o"></i>
+                </div>
+                <a href="@Url.Action("DsTinTuc","TinTuc")" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Phản hồi</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-cloud-download"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Lớp học</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-university"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Liên hệ</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-envelope-o"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Người dùng</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3><label>@ViewBag.SoGV</label></h3>
+                    <p>Doanh thu</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    xem thông tin <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

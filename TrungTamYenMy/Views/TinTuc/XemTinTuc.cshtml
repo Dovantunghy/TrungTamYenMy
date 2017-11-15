@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "XemTinTuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model TrungTamYenMy.Models.TinTuc
+
+<div class="container">
+    <div class="col-md-9">
+        <br />
+        <h3>@Model.TieuDe</h3>
+
+        <hr/>
+        <div>
+            <p style="font-style: italic">@Html.Raw(Model.Mota)</p>
+        </div>
+        <br />
+        <div>
+            <img src="@Model.HinhAnh" style="width: 100%" />
+            <br />
+        </div>
+        <br />
+       
+        <div style="text-align: justify">
+            <p>@Model.NoiDung</p>
+        </div>
+        <br />
+
+        <div style="text-align: justify">
+            <p>@Model.NoiDung</p>
+        </div>
+        <br />
+    </div>
+    <div class="col-md-3">
+        <br /><br />
+        <h4 style="color: #2a70b8; text-align: center">Học chọn gói chỉ với</h4>
+        <h3 style="color: #ff7e00; text-align: center; font-style: italic">700,000 đồng</h3>
+        <div align="center">
+            <a href="#" class="btn btn-success" style="width: 180px; height: 46px; text-align: center; font-size: 20px; font-weight: bold">Đăng ký ngay</a>
+        </div>
+
+        <hr />
+        <div>
+            <h4>Mục tiêu khóa học:
+                <h5>
+                    Nâng cao kiến thức, phát triển tư duy, khơi gợi đam mê yêu thích học Toán cho học sinh lớp 8, tạo tiền đề giúp học sinh đạt kết quả cao trong kỳ thi HSG các cấp.
+                    Cấu trúc khóa học:
+                    8 chuyên đề
+                    50 bài giảng
+                    Dịch vụ:
+                    Các kênh hỗ trợ học tập
+                    Thảo luận trong từng bài giảng
+                    Thời gian:
+                    Hạn đăng ký: 14/04/2018
+                    Ngày bế giảng: 31/05/2018
+                </h5>
+             </h4>
+        </div>
+    </div>
+</div>

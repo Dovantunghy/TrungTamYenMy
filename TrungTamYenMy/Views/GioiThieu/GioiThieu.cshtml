@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "GioiThieu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using TrungTamYenMy.Models
+@model List<About>
+<body>
+    <div id="wraper">
+        <section>
+            <div class="container" id="body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page">
+                            @foreach (var item in Model)
+                            {
+                                <br />
+                                <h2 style="text-align: center; color: #00008b">@item.TieuDe</h2>
+                                <hr />
+
+                                <p style="font-weight: bold; text-align: justify; font-style: italic;">@item.MoTa</p>
+                                <br />
+                                <div class="image text-center">
+                                    <a rel="shadowbox" href="#"><img src="@item.HinhAnh" class="img-thumbnail"></a>
+                                    <em style="display: block; margin: 10px 0 10px 0;">mô hình dạy học</em>
+                                </div>
+                                @Html.Raw(item.NoiDung)
+                            }
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+</body>

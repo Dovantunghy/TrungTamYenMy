@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model List<TrungTamYenMy.Models.TinTuc>
+
+@*Phần Slide trang web*@
+@Html.Action("SlidePartial", "Slide")
+@*Kết thúc Slide*@
+
+@*Phần tiêu chí và tin tức*@
+<div class="content_top">
+    <div class="container">
+        <div class="grid_1">
+            <div class="col-md-3">
+                <div class="box2">
+                    <ul class="list1">
+                        <i class="lock"> </i>
+                        <li class="list1_right">
+                            <p>Đội ngũ giáo viên chất lượng</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box3">
+                    <ul class="list1">
+                        <i class="clock1"> </i>
+                        <li class="list1_right">
+                            <p>Mô hình đào tạo khoa học, bài bản</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box4">
+                    <ul class="list1">
+                        <i class="vehicle"> </i>
+                        <li class="list1_right">
+                            <p>Đi thật nhanh tới thành công</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box5">
+                    <ul class="list1">
+                        <i class="dollar"> </i>
+                        <li class="list1_right">
+                            <p>Chi phí tiết kiệm, chiến lược rõ ràng</p></li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="column_center">
+            <h1>Đào tạo chất lượng - uy tín là mục tiêu của chúng tôi</h1>
+            <h2>Trung tâm đào tạo Yên Mỹ luôn tự hào vì đạo tạo được những nhân tài, những mầm non tương lai của đất nước!</h2>
+        </div>
+        @Html.Action("TinTucMoiPartial", "TinTuc")
+        @Html.Action("TinTucNoiBatPartial", "TinTuc")
+        @Html.Action("TinTucThiCuPartial", "TinTuc")
+    </div>
+</div>
+@*Kết thúc phần tiêu chí và tin tức*@
+
+@*Đội ngũ giáo viên*@
+<div class="content_middle">
+    <div class="container">
+        <ul class="promote">
+            <i class="promote_icon"> </i>
+            <li class="promote_head">
+                <a href="/GiaoVien/DoiNguGiaoVien">
+                    <h3>Đội ngũ giáo viên</h3>
+                </a>
+            </li>
+        </ul>
+        @Html.Action("DsGiaoVienPartial", "GiaoVien")
+    </div>
+</div>
+@*Kết thúc phần đội ngũ giáo viên*@
+
+@*Phần khóa học giảm giá và phản hổi từ học sinh*@
+<div class="container">
+    <div class="content_middle_bottom">
+        <div class="col-md-4">
+            <ul class="spinner">
+                <i class="spinner_icon"> </i>
+                <li class="spinner_head"><h3>Khóa học giảm giá</h3></li>
+                <div class="clearfix"> </div>
+            </ul>
+            <div class="timer_box">
+                <div class="thumb"> </div>
+                <div class="timer_grid">
+                    <ul id="countdown"></ul>
+                    <ul class="navigation">
+                        <li>
+                            <p class="timeRefDays">NGÀY</p>
+                        </li>
+                        <li>
+                            <p class="timeRefHours">GIỜ</p>
+                        </li>
+                        <li>
+                            <p class="timeRefMinutes">PHÚT</p>
+                        </li>
+                        <li>
+                            <p class="timeRefSeconds">GIÂY</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="thumb_desc">
+                    <h3>Khóa học tiếng anh IELT</h3>
+                    <div class="price">
+                        <span class="reducedfrom">2.400.00</span>
+                        <span class="actual">1.900.00</span>
+                    </div>
+                </div>
+                <a href="#"><div class="m_3 deal"><div class="link3">Đăng ký ngay</div></div></a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            @Html.Action("PhanHoiHocVien", "TinTuc")
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+@*Kết thúc phần khóa học giảm giá và phản hổi từ học s+inh*@

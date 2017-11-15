@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "DsLopHoc";
+    Layout = "~/Areas/Admin/Views/Shade/_Layout.cshtml";
+}
+
+
+@model List<TrungTamYenMy.Models.LopHoc>
+
+@*Quản lý người dùng*@
+<body>
+    <div class="container" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h6 class="panel-title"><i class="icon-table"></i>Quản lý lớp học</h6>
+                        <div style="float: right">
+                            <a href="/Admin/LopHoc/ThemMoi" class="btn btn-success" id="btnAdd" style="width: 150px; background-color: #239232"><span class="glyphicon glyphicon-plus"></span> Thêm mới</a>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232"> <span class="glyphicon glyphicon-share"></span> Import</button>
+                            <button class="btn btn-success" style="width: 150px; background-color: #239232">Xuất file</button>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            $('#AlertBox').removeClass('hide');
+                            $('#AlertBox').delay(2000).slideUp(500);
+                        });
+
+                    </script>
+                    <div id="AlertBox">
+                        @Html.Raw(TempData["err"])
+                    </div>
+                    <div class="datatable">
+                        <table class="table">
+                            <thead>
+                                <tr style="background-color: #b6fafa">
+                                    <td><b>Tên lớp học</b></td>
+                                    <td><b>Tiêu đề Seo</b></td>
+                                    <td><b>Hình ảnh</b></td>
+                                    <td><b>Tên giáo viên</b></td>
+                                    <td><b>Thứ</b></td>
+                                    <td><b>Khung giờ học</b></td>
+                                    <td><b>Số HV</b></td>
+                                    <td><b>Trạng thái</b></td>
+                                    <td><b>Sửa/Xóa</b></td>
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="vi">
+                                    <td>@item.TenLop</td>
+                                    <td>@item.MetatTitle</td>
+                                    <td>@item.HinhAnh</td>
+                                    <td>@item.TenGiaoVienDay</td>
+                                    <td>@item.Thu</td>
+                                    <td>@item.KhungGioHoc</td>
+                                    <td>@item.SoHV</td>
+                                    <td>@item.TrangThai</td>
+                                    <td>
+                                        <a href="@Url.Action("ChinhSua", new {@MaLop = item.MaLop})">Sửa</a>/<a href="@Url.Action("Xoa", new { @MaLop = item.MaLop })">Xóa</a>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@*Kết thúc phần quản lý lớp học*@
+
+

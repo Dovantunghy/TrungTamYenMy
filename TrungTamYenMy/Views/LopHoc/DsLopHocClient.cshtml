@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Danh sách lớp học";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model List<TrungTamYenMy.Models.LopHoc>
+
+<br />
+<div class="container">
+
+    <div class="sellers_grid">
+        <ul class="sellers">
+            <li class="sellers_desc">
+                <a style="text-decoration: none" href="@Url.Action("DsLopHocClient", "LopHoc")">
+                    <h2 style="text-align: center">Danh sách lớp học</h2>
+                </a>
+            </li>
+            <div class="clearfix"> </div>
+        </ul>
+    </div>
+    <br />
+    <hr />
+    <br /><div class="row">
+        <div class="col-md-12">
+            @foreach (var item in Model)
+            {
+                <a href="@Url.Action("ChiTietLopHoc", new {@MaLop = @item.MaLop})" style="text-decoration: none;">
+                    <div class="col-md-4 grid_3">
+                        <h3>
+                            <a href="@Url.Action("ChiTietLopHoc", new {@MaLop = @item.MaLop})" style="text-decoration: none;">@item.TenLop</a>
+                        </h3>
+                        <a href="@Url.Action("ChiTietLopHoc", new {@MaLop = @item.MaLop})" style="text-decoration: none;"><img src="@item.AnhBia" class="img-responsive" alt="" style="width: 100%; height: 200px;" /></a>
+
+                        <div class="blog-poast-info">
+                            <ul>
+                                <li style="margin-left: -20px;"><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                                <li><i class="date"> </i><span> </span>08-11-2017</li>
+                                <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>@item.MoTa</p>
+                        <div class="button">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
